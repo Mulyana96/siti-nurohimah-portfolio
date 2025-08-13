@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Portfolio Website" />
+  <meta name="author" content="Teacher Siti Nurohimah" />
+  <title>Portfolio - Teacher Siti Nurohimah</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" />
+
+  <!-- SimpleLightbox plugin CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Core Theme CSS -->
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <!-- Custom CSS for hover effects -->
+  <style>
+
+    .social-icon {
+      color: #555;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .social-icon:hover {
+      color: orange;
+      transform: scale(1.2) translateY(-5px);
+      text-shadow: 0 0 8px rgba(255, 165, 0, 0.7);
+    }
+
+    .social-icon.active {
+      color: orange !important;
+      transform: scale(1.2) translateY(-5px);
+      text-shadow: 0 0 8px rgba(255, 165, 0, 0.9);
+    }
+    
+    .text-orange {
+      color: #ff6600; /* warna oranye cerah */
+    }
+    .navbar .nav-link {
+      color: orange !important; /* warna default */
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+i
+    .navbar .nav-link:hover {
+      color: #ff6600 !important; /* warna saat hover */
+    }
+
+    footer {  
+      background-color:#f8f9fa;
+      color: orange;
+      padding:0px; 
+    }   
+
+    /* Default light mode */
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+#darkModeToggle i {
+  color: orange;
+  transition: color 0.3s ease;
+}
+
+#darkModeToggle:hover i {
+  color: #ffb347;
+}
+
+#darkModeToggle {
+  margin-left: 30px; 
+  cursor: pointer;
+  color: orange;
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+  background: none;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+#darkModeToggle:hover {
+  color: #ffb347;
+  text-decoration: underline;
+}
+
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .navbar {
+  background-color: #1f1f1f !important;
+}
+
+body.dark .nav-link,
+body.dark .navbar-brand {
+  color: orange !important;
+}
+
+body.dark .btn-link {
+  color: orange !important;
+}
+    
+    </style>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    </head>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init({
+    duration: 1000,
+    once: true
+    });
+
+    </script>
+
+    <script>
+    document.querySelectorAll('.social-icon').forEach(icon => {
+      icon.addEventListener('click', function(e) {
+      e.preventDefault(); // agar tidak langsung buka link saat demo, bisa hapus ini kalau mau normal
+      this.classList.toggle('active');
+    });
+    });
+    </script>
+  
+    <body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container px-4 px-lg-5">
+
+         <!-- Tombol Dark Mode di sini, sejajar dengan brand -->
+    <button id="darkModeToggle" class="btn btn-link p-0" aria-label="Toggle Dark Mode">
+      <i class="bi bi-moon-fill fs-4"></i>
+    </button>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      
+      <a class="navbar-brand text-orange" href="index.html">Teacher Siti Nurohimah</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="container px-4 px-lg-5 h-100">
+      <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-8 align-self-end" data-aos="fade-down">
+          <h1 class="text-orange font-weight-bold">Halo, Saya Siti Nurohimah</h1>
+          <hr class="divider" />
+        </div>
+        <div class="col-lg-8 align-self-baseline" data-aos="fade-up">
+          <p class="text-white-75 mb-5">Selamat datang di portofolio saya! Kunjungi proyek saya, karir, dan kerjaan.</p>
+          <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- About -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Foto -->
+      <div class="col-lg-4 text-center mb-4 mb-lg-0" data-aos="fade-right">
+        <img src="assets/img/profile.jpg" alt="My Photo" class="about-photo">
+      </div>
+      <!-- Deskripsi -->
+      <div class="col-lg-8" data-aos="fade-left">
+        <h2 class="fw-bold text-orange">About Me</h2>
+        <p class="lead text-muted">
+          Saya adalah guru berpengalaman dengan fokus pada pengembangan metode pembelajaran efektif dan inovatif. 
+          Berkomitmen untuk membimbing siswa mencapai potensi terbaiknya melalui pendekatan yang interaktif dan berbasis teknologi. 
+          Aktif dalam pembuatan materi pembelajaran digital untuk mendukung proses belajar yang lebih dinamis dan relevan.
+        </p>
+        <p>
+          Saya percaya bahwa pendidikan adalah kunci untuk membuka potensi terbaik setiap individu.
+          Oleh karena itu, saya selalu berusaha mengembangkan metode pembelajaran yang inovatif dan menggunakan teknologi modern untuk mendukung proses belajar mengajar.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Pengalaman Kerja ======= -->
+<section id="experience" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-orange">Experience</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4 d-flex align-items-stretch">
+        <div class="card shadow-lg border-0 text-center p-4 experience-card">
+          <div class="mb-3">
+            <i class="bi bi-briefcase-fill fs-1 text-primary"></i>
+          </div>
+          <h4 class="fw-bold">Guru Fisika</h4>
+          <p>Mengajar di SMK Swasta selama 2 tahun, membimbing siswa meraih nilai UN tertinggi di wilayah.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex align-items-stretch">
+        <div class="card shadow-lg border-0 text-center p-4 experience-card">
+          <div class="mb-3">
+            <i class="bi bi-laptop-fill fs-1 text-success"></i>
+          </div>
+          <h4 class="fw-bold">Pelatih Olimpiade Sains</h4>
+          <p>Membina tim olimpiade sains tingkat provinsi dengan hasil 3 medali emas dalam 2 tahun.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex align-items-stretch">
+        <div class="card shadow-lg bordeir-0 text-center p-4 experience-card">
+          <div class="mb-3">
+            <i class="bi bi-book-half fs-1 text-warning"></i>
+          </div>
+          <h4 class="fw-bold">Pengembang Kurikulum</h4>
+          <p>Menyusun kurikulum pembelajaran inovatif berbasis teknologi untuk siswa SMA.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ======= KARYA & KEGIATAN ======= -->
+<section id="work" class="py-5" style="background: linear-gradient(to right, #f9f9f9, #e6e6e6);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-orange">Works & Activities</h2>
+      <p class="text-muted">Dokumentasi kegiatan, prestasi, dan karya yang pernah dibuat</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100 border-0 karya-card d-flex flex-column">
+          <img src="assets/img/galeri//galeri.jpg" class="card-img-top" alt="Galeri Mengajar">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Galeri Kegiatan Mengajar</h5>
+            <p class="card-text text-muted">Foto kegiatan mengajar, seminar, dan workshop.</p>
+          </div>
+            <div class="text-center mt-4">
+            <a href="galeri.html" class="btn btn-primary">Lihat Selengkapnya</a>
+            </div>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100 border-0 karya-card d-flex flex-column">
+          <img src="assets/img/prestasi/prestasi.jpg" class="card-img-top" alt="Prestasi Siswa">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Prestasi Siswa</h5>
+            <p class="card-text text-muted">Dokumentasi lomba, piagam, dan hasil karya siswa.</p>
+          </div>
+         <div class="text-center mt-4">
+          <a href="prestasi.html " class="btn btn-primary">Lihat Selengkapnya</a>
+         </div>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100 border-0 karya-card d-flex flex-column">
+          <img src="assets/img/karya/karya.jpg" class="card-img-top" alt="Karya Tulis">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Karya Tulis / Publikasi</h5>
+            <p class="card-text text-muted">Buku, modul, atau artikel ilmiah yang telah diterbitkan.</p>
+          </div>
+         <div class="text-center mt-4">
+           <a href="karya.html" class="btn btn-primary">Lihat Selengkapnya</a>     
+         </div>     
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow-sm h-100 border-0 karya-card d-flex flex-column">
+          <img src="assets/img/pendidikan/pendidikan.jpg" class="card-img-top" alt="Proyek Pendidikan">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Proyek Pendidikan</h5>
+            <p class="card-text text-muted">Program inovasi pembelajaran yang telah dijalankan.</p>
+          </div>
+        <div class="text-center mt-4">
+        <a href="pendidikan.html" class="btn btn-primary">Lihat Selengkapnya</a>
+     </div>
+    </div>
+  </div>
+
+<!-- Contact -->
+<section class="page-section bg-light" id="contact">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-lg-8 col-xl-6 text-center" data-aos="fade-up">
+        <h2 class="mt-0 fw-bold text-orange">Contact!</h2>
+        <hr class="divider" />
+        <p class="text-muted mb-5">Find me on social media and let's collaborate!</p>
+      </div>
+    </div>
+    <div class="row gx-4 gx-lg-5 justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+      <div class="col-lg-8 text-center">
+        <a href="https://facebook.com/" target="_blank" class="mx-3 social-icon" aria-label="Facebook">
+          <i class="bi bi-facebook fs-1"></i>
+        </a>
+        <a href="https://instagram.com/" target="_blank" class="mx-3 social-icon" aria-label="Instagram">
+          <i class="bi bi-instagram fs-1"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" class="mx-3 social-icon" aria-label="LinkedIn">
+          <i class="bi bi-linkedin fs-1"></i>
+        </a>
+        <a href="https://github.com/" target="_blank" class="mx-3 social-icon" aria-label="GitHub">
+          <i class="bi bi-github fs-1"></i>
+        </a>
+        <a href="https://youtube.com/" target="_blank" class="mx-3 social-icon" aria-label="YouTube">
+          <i class="bi bi-youtube fs-1"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+        
+      <!--Footer-->
+      <footer class="bg-light py-5">
+      <div class="container px-4 px-lg-5">
+      <div class="small text-center" style="color: orange;">
+      Copyright &copy; 2023 - Teacher Siti Nurohimah
+      </div>
+      </div>
+      </footer>
+          
+  <!-- Bootstrap core JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- SimpleLightbox plugin JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+
+  <!-- AOS Animation JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <!-- Core theme JS -->
+  <script src="js/scripts.js"></script>
+
+</body>
+
+<!-- Tombol toggle dark mode (letakkan di HTML, misal di navbar) -->
+<script>
+  const toggle = document.getElementById('darkModeToggle');
+  const icon = toggle.querySelector('i');
+
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    if (document.body.classList.contains('dark')) {
+      icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+    } else {
+      icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+    }
+  });
+</script>
+  
+</html>
+
